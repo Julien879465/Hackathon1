@@ -5,7 +5,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
-    <nav className="relative w-full flex flex-wrap items-center justify-between px-2 py-3 bg-pink-500 mb-3">
+    <nav className="relative w-full flex flex-wrap items-center justify-between px-2 py-3 bg-black mb-3">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <a

@@ -1,3 +1,12 @@
+### Rappels pour les states avec les contexts 
+lorsqu'on a besoin d'un state dans un component
+on importe :
+import {useUserContext} from "../contexts/UserContext.jsx" 
+
+et dans la fonction en haut (comme pour les states classiques)
+const { <lestateenquestion>, <l'autrestatedontonàbesoin> } = useUserContext();
+
+
 ## Concept
 
 Ce template est conçu pour servir de base à tous les projets (P2/P3) suivants la stack React-Node-MySQL telle qu'enseignée à la Wild Code School. Il est préconfiguré avec un ensemble d'outils qui aideront les élèves à produire un code correspondant mieux aux standards du monde du travail et plus facile à maintenir, tout en restant simple à utiliser.
