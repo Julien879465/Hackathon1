@@ -1,6 +1,5 @@
 import Navbar from "@components/Navbar";
 import { Button } from "@material-tailwind/react";
-import Landing from "./pages/Landing";
 
 export default function App() {
   return (
@@ -10,7 +9,6 @@ export default function App() {
         Hello world!
       </h1>
       <Button className="bg-indigo-400">Button</Button>
-      <Landing />
     </div>
   );
 }
