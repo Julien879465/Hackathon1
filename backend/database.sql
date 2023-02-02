@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS manger_db;
-CREATE DATABASE manger_db;
-USE manger_db;
-
 CREATE TABLE restaurant (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `restaurant_name` VARCHAR(255),
@@ -35,7 +31,7 @@ VALUES (1, 'Zod', 'Salade et carottes rempli pas estomac. Femme a aimé mangé p
        (5, 'Thog', 'Bien manger, Pierre donne beaucoup à manger, bon jambon.', 5),
        (6, 'Thog', 'Manger viande dans pain, et patates batons dans cornet Miam!', 4.5);
 
-CREATE TABLE menu_item (
+CREATE TABLE menu (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
   `restaurant_name` VARCHAR(255),
   `name_menu` VARCHAR(255),
@@ -44,7 +40,7 @@ CREATE TABLE menu_item (
   `price` FLOAT
 );
 
-INSERT INTO menu_item (`id`, `restaurant_name`, `name_menu`, `description_menu`, `image_url`, `price`)
+INSERT INTO menu (`id`, `restaurant_name`, `name_menu`, `description_menu`, `image_url`, `price`)
 VALUES (1, 'PokéMamouth', 'Pokébowl', 'un bol poisson cru légumes qui craquent', 'pokébowl.jpg', 10.99),
        (2, 'Jurassic Sushi', 'Sushi', 'tranches poisson cru sur riz avec sauce marron', 'sushi.jpg', 12.99),
        (3, 'Juicy Jungle', 'Fruits Bowl', 'bol fruits et baies', 'bol-fruits.jpg', 9.99),

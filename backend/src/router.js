@@ -5,7 +5,7 @@ const router = express.Router();
 const itemControllers = require("./controllers/itemControllers");
 const restaurantControllers = require("./controllers/restaurantcontrollers");
 const reviewControllers = require("./controllers/reviewControllers");
-const menu_itemControllers = require("./controllers/menu_itemControllers");
+const menuControllers = require("./controllers/menuControllers");
 
 router.get("/items", itemControllers.browse);
 router.get("/items/:id", itemControllers.read);
@@ -25,10 +25,10 @@ router.put("/reviews/:id", reviewControllers.edit);
 router.post("/reviews", reviewControllers.add);
 router.delete("/reviews/:id", reviewControllers.destroy);
 
-router.get("/menu_items", menu_itemControllers.browse);
-router.get("/menu_item/:id", menu_itemControllers.read);
-router.put("/menu_item/:id", menu_itemControllers.edit);
-router.post("/menu_item", menu_itemControllers.add);
-router.delete("/menu_item/:id", menu_itemControllers.destroy);
+router.get("/menus", menuControllers.browse);
+router.get("/menus/:id", menuControllers.read);
+router.put("/menus/:id", menuControllers.edit);
+router.post("/menus", menuControllers.add);
+router.delete("/menus/:id", menuControllers.destroy);
 
 module.exports = router;
