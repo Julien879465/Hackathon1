@@ -9,25 +9,27 @@ function ChangerToi() {
   };
 
   return (
-    <div className="flex flex-col h-full">
+    <div className=" flex flex-col h-screen items-center justify-between">
       <img
         src={voiture}
         alt="homme préhistorique en voiture"
-        className="fixed top-0 left-0"
+        className="w-full"
       />
-      <div className="bg-white  fixed bottom-O w-full left-[50%] right-[50%] flex flex-col h-full items-center justify-end">
-        <h1 className="font-cursive text-brown text-4xl">HUUU BERT</h1>
-        <p className="font-sans font-semibold text-xl">
-          arrive, pousse mammouth{" "}
-        </p>
-        <button
-          type="button"
-          className="text-brown border-brown border-solid font-bold font-sans text-xl"
-          onClick={handleClick}
-        >
-          CHANGER TOI ?
-        </button>
-        
+
+      <div className="fixed rounded-t-lg bottom-0 h-[45%] left-[10%] right-[10%] w-10/12 bg-white">
+        <div className="flex  rounded-t-lg flex-col items-center justify-evenly bg-white h-full">
+          <h1 className="font-cursive text-brown text-4xl">HUUU BERT</h1>
+          <p className="font-sans font-semibold text-xl">
+            arrive, pousse mammouth{" "}
+          </p>
+          <button
+            type="button"
+            className="text-brown border-brown rounded-full p-3 border-2 border-solid font-bold font-sans text-xl"
+            onClick={handleClick}
+          >
+            CHANGER TOI ?
+          </button>
+        </div>
       </div>
     </div>
   );

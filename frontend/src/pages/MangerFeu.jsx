@@ -24,7 +24,7 @@ function MangerFeu() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7">
+    <div className="flex flex-col items-start justify-around w-full p-auto px-7 bg-bg-sable">
       <div className="flex flex-row w-full justify-evenly items-center">
         <button
           type="button"
@@ -39,7 +39,7 @@ function MangerFeu() {
         </h1>
       </div>
 
-      <div className="flex flex-col justify-around h-full p-auto m-auto">
+      <div className="flex flex-col justify-evenly p-auto m-auto">
         {data
           .filter(
             (feu) =>
@@ -49,11 +49,11 @@ function MangerFeu() {
           )
           .map((restaurant) => (
             <div
-              className="bg-white rounded-xl flex flex-col "
+              className="bg-white rounded-xl flex flex-col my-4 "
               key={restaurant.id}
             >
               <img
-                className="aspect-video rounded-md"
+                className="aspect-video rounded-t-lg"
                 src={restaurant.url}
                 alt="Pizza"
               />
