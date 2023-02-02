@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import eucalyptus from "../assets/img/eucalyptus 1.svg";
 import Popup from "../components/Popup";
+import Navbar from "../components/Navbar";
 
 function Manger() {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ function Manger() {
   };
   return (
     <>
+      <Navbar />
       <div className="z-20 flex flex-col items-start justify-around w-full px-4">
         <img
           src={eucalyptus}

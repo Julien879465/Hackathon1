@@ -6,6 +6,7 @@ import grok from "../assets/img/grok.png";
 import broud from "../assets/img/broud.png";
 import plante from "../assets/backgrounds/eucalyptus.png";
 import stone from "../assets/backgrounds/stone.png";
+import Navbar from "../components/Navbar";
 
 function Personnages() {
   const navigate = useNavigate();
@@ -55,6 +56,7 @@ function Personnages() {
             ? personnage.map((elem) => (
                 <div className="w-2/5">
                   <img
+                    key={elem.nom}
                     className="rounded-md"
                     src={elem.img}
                     alt={elem.nom}
@@ -88,7 +90,7 @@ function Personnages() {
                 ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
