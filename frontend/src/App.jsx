@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
 import { UserContextProvider } from "./contexts/UserContext";
 import Personnages from "./pages/Personnages";
 
