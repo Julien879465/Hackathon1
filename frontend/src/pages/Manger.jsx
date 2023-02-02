@@ -31,7 +31,7 @@ function Manger() {
           value="feu"
           onClick={handleClick}
         >
-          Manger feu ?
+          Manger feu ? 🔥
         </button>
         <button
           type="button"
@@ -39,7 +39,7 @@ function Manger() {
           value="feuille"
           onClick={handleClick}
         >
-          Manger feuille ?
+          Manger feuille ? 🌿
         </button>
       </div>
     </>
