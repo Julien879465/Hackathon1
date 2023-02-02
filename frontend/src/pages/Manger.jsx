@@ -3,19 +3,19 @@ import { useNavigate } from "react-router-dom";
 import eucalyptus from "../assets/img/eucalyptus 1.svg";
 
 function Manger() {
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-// //   const handleClick = (e) => {
-// //     if (e.target.value === "feu") {
-// //       navigate("/MangerFeu");
-// //     }
-// //     if (e.target.value === "feuille") {
-// //       navigate("/MangerFeuille");
-// //     }
-// //   };
+  const handleClick = (e) => {
+    if (e.target.value === "feu") {
+      navigate("/mangerfeu");
+    }
+    if (e.target.value === "feuille") {
+      navigate("/mangerfeuille");
+    }
+  };
   return (
     <>
-      <div className="flex flex-col items-start justify-around w-full">
+      <div className="flex flex-col items-start justify-around w-full px-4">
         <img
           src={eucalyptus}
           alt="eucalyptus"
@@ -29,7 +29,7 @@ function Manger() {
           type="button"
           className="bg-white py-14 rounded-xl mb-10"
           value="feu"
-        //   onClick={handleClick}
+          onClick={handleClick}
         >
           Manger feu ?
         </button>
@@ -37,7 +37,7 @@ function Manger() {
           type="button"
           className="bg-white p-14 rounded-xl"
           value="feuille"
-        //   onClick={handleClick}
+          onClick={handleClick}
         >
           Manger feuille ?
         </button>
