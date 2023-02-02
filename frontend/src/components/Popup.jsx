@@ -1,4 +1,5 @@
 import React from "react";
+import cailloux from "../assets/icons/cailloux.png";
 
 export default function Popup() {
   const card = {
@@ -19,7 +20,7 @@ export default function Popup() {
       </button>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50">
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 backdrop-blur-sm">
             <div className="relative w-4/5 md:w-auto my-6 mx-auto max-w-sm">
               <div className="rounded-lg shadow-lg relative flex flex-col w-full bg-white">
                 <div className="flex flex-col items-center justify-between p-5 rounded-t">
@@ -29,14 +30,19 @@ export default function Popup() {
                     alt="manger"
                     key={card.url}
                   />
-                  <h3 className="pt-5 text-3xl font-sans font-semibold">
+                  <h3 className="pt-5 text-2xl font-sans font-bold">
                     {card.name}
                   </h3>
                 </div>
-                <div className="p-6 flex justify-center">
+                <div className="flex justify-center">
                   <p className="text-brown font-bold font-sans text-2xl">
                     {card.price}
                   </p>
+                  <img
+                    src={cailloux}
+                    alt="cailloux"
+                    className="mx-3 w-10 h-10"
+                  />
                 </div>
 
                 <div className="flex items-center flex-col justify-end p-6 rounded-b">
@@ -58,7 +64,7 @@ export default function Popup() {
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black">g</div>
+          <div></div>
         </>
       ) : null}
     </>
