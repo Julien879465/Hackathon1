@@ -37,7 +37,7 @@ function Personnages() {
         <div className="flex flex-col items-center justify-center h-full">
           <h1 className="font-cursive text-4xl text-brown">TOI ?</h1>
           <select
-            className="z-50 rounded-full w-9/12 md:w-7/12 h-11 text-center font-sans m-9 bg-white text-xl"
+            className="z-50 rounded-full w-9/12 md:w-7/12 h-11 text-center font-sans m-9 bg-white text-xl shadow-2xl drop-shadow-2xl"
             name="selectName"
             onChange={(e) => setSelectedName(e.target.value)}
           >
@@ -63,7 +63,7 @@ function Personnages() {
                   <div className="w-2/5">
                     <img
                       key={elem.nom}
-                      className="rounded-md"
+                      className="rounded-md  shadow-2xl drop-shadow-2xl"
                       src={elem.img}
                       alt={elem.nom}
                       onClick={() => navigate("/manger")}
@@ -82,7 +82,7 @@ function Personnages() {
                         src={elem.img}
                         alt={elem.nom}
                       />
-                      <h2 className="relative bottom-5 bg-brown text-white font-bold p-2 w-1/3 text-center rounded-md">
+                      <h2 className="relative bottom-5 bg-brown text-white font-bold p-2 w-1/3 text-center rounded-md  shadow-2xl drop-shadow-2xl">
                         {elem.nom}
                       </h2>
                       <button
