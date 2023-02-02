@@ -44,39 +44,38 @@ function MangerFeu() {
           </h1>
         </div>
 
-      <div className="z-10 flex flex-col justify-evenly p-auto m-auto">
-        {data
-          .filter(
-            (feu) =>
-              feu.cuisine === "Italien" ||
-              feu.cuisine === "gastronomique" ||
-              feu.cuisine === "Fast-Food"
-          )
-          .map((restaurant) => (
-            <div
-              className="bg-white rounded-xl flex flex-col my-4 "
-              key={restaurant.id}
-            >
-              <img
-                className="aspect-video rounded-t-lg"
-                src={restaurant.url}
-                alt="Pizza"
-              />
-              <div className="flex justify-between font-sans font-semibold p-3">
-                <h2 className="text-base">{restaurant.restaurant_name}</h2>
-                <p className="text-xl">{restaurant.rating}/5</p>
-              </div>
+        <div className="z-10 flex flex-col justify-evenly p-auto m-auto">
+          {data
+            .filter(
+              (feu) =>
+                feu.cuisine === "Italien" ||
+                feu.cuisine === "gastronomique" ||
+                feu.cuisine === "Fast-Food"
+            )
+            .map((restaurant) => (
+              <div
+                className="bg-white rounded-xl flex flex-col my-4 "
+                key={restaurant.id}
+              >
+                <img
+                  className="aspect-video rounded-t-lg"
+                  src={restaurant.url}
+                  alt="Pizza"
+                />
+                <div className="flex justify-between font-sans font-semibold p-3">
+                  <h2 className="text-base">{restaurant.restaurant_name}</h2>
+                  <p className="text-xl">{restaurant.rating}/5</p>
+                </div>
               </div>
             ))}
-        
+        </div>
+        <img src={flamme} alt="flamme" className="z-0 fixed top-[10%] left-0" />
+        <img
+          src={flammeRight}
+          alt="flamme"
+          className="z-0 fixed bottom-[10%] right-0"
+        />
       </div>
-      <img src={flamme} alt="flamme" className="z-0 fixed top-[10%] left-0" />
-      <img
-        src={flammeRight}
-        alt="flamme"
-        className="z-0 fixed bottom-[10%] right-0"
-      />
-    </div>
     </>
   );
 }
