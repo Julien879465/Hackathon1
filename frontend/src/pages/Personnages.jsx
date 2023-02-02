@@ -78,7 +78,7 @@ function Personnages() {
                   .map((elem) => (
                     <div className="h-[495px] w-4/5">
                       <img
-                        className="rounded-md "
+                        className="rounded-md"
                         src={elem.img}
                         alt={elem.nom}
                       />
