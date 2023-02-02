@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ugg from "../assets/img/ugg.png";
 import gata from "../assets/img/gata.png";
 import grok from "../assets/img/grok.png";
@@ -7,6 +8,7 @@ import plante from "../assets/backgrounds/eucalyptus.png";
 import stone from "../assets/backgrounds/stone.png";
 
 function Personnages() {
+  const navigate = useNavigate();
   const [selectedName, setSelectedName] = useState("");
   const personnage = [
     {
@@ -27,7 +29,7 @@ function Personnages() {
         className=" z-0 fixed right-0 bottom-0"
       />
       <select
-        className="rounded-full w-[80%] h-11 text-center"
+        className="z-50 rounded-full w-[80%] h-11 text-center"
         name="selectName"
         onChange={(e) => setSelectedName(e.target.value)}
       >
@@ -58,6 +60,7 @@ function Personnages() {
                   <button
                     type="button"
                     className="relative bottom-1/2 left-[100px] text-center bg-bg-sable  rounded-full w-32 h-10 text-brown  font-cursive text-3xl animate-pulse"
+                    onClick={() => navigate("/manger")}
                   >
                     Moi
                   </button>
