@@ -29,7 +29,7 @@ function Personnages() {
         className=" z-0 fixed right-0 bottom-0"
       />
       <select
-        className="rounded-full w-[80%] h-11 text-center"
+        className="z-50 rounded-full w-[80%] h-11 text-center"
         name="selectName"
         onChange={(e) => setSelectedName(e.target.value)}
       >
