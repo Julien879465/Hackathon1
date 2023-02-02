@@ -1,18 +1,19 @@
 CREATE TABLE restaurant (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `restaurant_name` VARCHAR(255),
+  `restaurant_ìmage` VARCHAR(255),
   `cuisine` VARCHAR(255),
   `adresse` VARCHAR(255),
   `rating` FLOAT
 );
 
 INSERT INTO restaurant (`restaurant_name`, `cuisine`, `adresse`, `rating`)
-VALUES ('PokéMamouth', 'Pokébowl', 'grotte numéro 12', 4.5),
-       ('Jurassic Sushi', 'Sushi', 'grotte numéro 4', 5),
-       ('Juicy Jungle', 'Bar à fruits', 'grotte numéro 2', 4.8),
-       ('Dino Delizioso', 'Italien', 'grotte numéro 7', 4.3),
-       ('Chez Pierre', 'gastronomique', 'grotte numéro 8', 4.9),
-       ('The Stone Age Kitchen', 'Fast-Food', 'grotte numéro 11', 4.6);
+VALUES ('PokéMamouth', 'Pokébowl', 'pokébowl.jpg''grotte numéro 12', 4.5),
+       ('Jurassic Sushi', 'Sushi', 'sushi.jpg''grotte numéro 4', 5),
+       ('Juicy Jungle', 'Bar à fruits', 'bol-fruits.jpg''grotte numéro 2', 4.8),
+       ('Dino Delizioso', 'Italien','pizzeria.jpg pates.jpg' 'grotte numéro 7', 4.3),
+       ('Chez Pierre', 'gastronomique', 'menu_gastro.jpg''grotte numéro 8', 4.9),
+       ('The Stone Age Kitchen', 'Fast-Food', 'fastfood.jpg''grotte numéro 11', 4.6);
 
 CREATE TABLE review (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
