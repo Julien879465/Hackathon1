@@ -43,7 +43,12 @@ function Personnages() {
         {selectedName === ""
           ? personnage.map((elem) => (
               <div className="w-2/5">
-                <img className="rounded-md" src={elem.img} alt={elem.nom} />
+                <img
+                  className="rounded-md"
+                  src={elem.img}
+                  alt={elem.nom}
+                  onClick={() => navigate("/manger")}
+                />
                 <h2 className="relative bottom-5 bg-slate-900 font-sans text-white   w-1/3 text-center rounded-md">
                   {elem.nom}
                 </h2>
