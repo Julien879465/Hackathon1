@@ -3,6 +3,7 @@ import MangerFeu from "./pages/MangerFeu";
 import MangerFeuille from "./pages/MangerFeuille";
 import Personnages from "./pages/Personnages";
 import Manger from "./pages/Manger";
+import ChangerToi from "./pages/ChangerToi";
 import { UserContextProvider } from "./contexts/UserContext";
 import Home from "./pages/Home";
 
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/personnages" element={<Personnages />} />
           <Route path="/mangerfeu" element={<MangerFeu />} />
           <Route path="/mangerfeuille" element={<MangerFeuille />} />
+          <Route path="/changertoi" element={<ChangerToi />} />
           <Route path="/panier" element={<Panier />} />
         </Routes>
       </div>
