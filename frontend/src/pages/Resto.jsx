@@ -1,37 +1,34 @@
-import React from "react";
-import Pizzeria from "../assets/img/Pizzeria.png";
-import back from "../assets/img/chevron-left.png";
+import React, { useState, useEffect } from "react";
+/*import { useUserContext } from "../contexts/UserContext.jsx";*/
+import axios from "axios";
+import Restaurant from "@components/restaurant";
 
-function Resto() {
+function Resto({ selectedRestaurant }) {
   const [data, setData] = useState([]);
-
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/manger");
-  };
+  console.log(selectedRestaurant);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}restaurants`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/restaurants`)
       .then((res) => {
         setData(res.data);
       })
       .catch((err) => console.error(err));
   }, []);
+  console.log(data);
 
   return (
-    <div className="flex flex-col items-start justify-around w-full p-auto">
-      <div className="w-full">
-        <button
-          type="button"
-          className="fixed z-10 top-8 left-8 h-[30px] w-[30px] rounded-full bg-white m-0 flex items-center justify-center"
-          onClick={handleClick}
-        >
-          <img src={back} alt="go back" />
-        </button>
-        <img src={Pizzeria} alt="Restaurant" className="max-h-[60%] w-full" />
-      </div>
+    <div>
+      {data
+        .filter((x) => x.restaurant_name === selectedRestaurant)
+        .map((elem) => (
+          <li key={elem.id}>
+            <img src={elem.url} />
+            <h1>{elem.restaurant_name}</h1>
+          </li>
+        ))}
+
+      <Restaurant selectedRestaurant={selectedRestaurant} />
     </div>
   );
 }

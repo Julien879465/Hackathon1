@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
 import flamme from "../assets/img/flame.png";
 import flammeRight from "../assets/img/flameright.png";
 
-function MangerFeu() {
+function MangerFeu({ selectedRestaurant, setSelectedRestaurant }) {
   // faire le fetch ici en filtrant sur feu
   const [data, setData] = useState([]);
-
+  /*const { setSelectedRestaurant } = useUserContext();*/
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -25,6 +24,12 @@ function MangerFeu() {
       })
       .catch((err) => console.error(err));
   }, []);
+
+  const handleSelection = (e) => {
+    setSelectedRestaurant(e.target.key);
+    // navigate("/Resto");
+  };
+  console.log(selectedRestaurant);
 
   return (
     <>
@@ -53,7 +58,12 @@ function MangerFeu() {
                 feu.cuisine === "Fast-Food"
             )
             .map((restaurant) => (
-              <div
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedRestaurant(restaurant.restaurant_name);
+                  navigate("/Resto");
+                }}
                 className="bg-white rounded-xl flex flex-col my-4 shadow-2xl drop-shadow-xl "
                 key={restaurant.id}
               >
@@ -66,7 +76,7 @@ function MangerFeu() {
                   <h2 className="text-base">{restaurant.restaurant_name}</h2>
                   <p className="text-xl">{restaurant.rating}/5</p>
                 </div>
-              </div>
+              </button>
             ))}
         </div>
         <img src={flamme} alt="flamme" className="z-0 fixed top-[10%] left-0" />
