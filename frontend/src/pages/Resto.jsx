@@ -1,19 +1,18 @@
-import React from "react";
-import Pizzeria from "../assets/img/Pizzeria.png";
-import back from "../assets/img/chevron-left.png";
+import React, { useState, useEffect } from "react";
+/*import { useUserContext } from "../contexts/UserContext.jsx";*/
+import axios from "axios";
+import Restaurant from "@components/restaurant";
 
-function Resto() {
+const Resto = () => {
   const [data, setData] = useState([]);
 
-  const navigate = useNavigate();
+  /* const [loading, setLoading] = useState(false);*/
+  /*const { selectedRestaurant } = useUserContext();*/
 
-  const handleClick = () => {
-    navigate("/manger");
-  };
-
+  /* console.log(data);*/
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}restaurants`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/restaurants`)
       .then((res) => {
         setData(res.data);
       })
@@ -21,19 +20,22 @@ function Resto() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start justify-around w-full p-auto">
-      <div className="w-full">
-        <button
-          type="button"
-          className="fixed z-10 top-8 left-8 h-[30px] w-[30px] rounded-full bg-white m-0 flex items-center justify-center"
-          onClick={handleClick}
-        >
-          <img src={back} alt="go back" />
-        </button>
-        <img src={Pizzeria} alt="Restaurant" className="max-h-[60%] w-full" />
-      </div>
+    <div>
+      {data
+        .filter((elem) => elem.cuisine === "Italien")
+        .map((elem) => (
+          <li key={elem.id}>
+            <img src={elem.url}></img>
+          </li>
+        ))}
+
+      <h2>Menus for </h2>
+      {/*{loading ? (
+        <p>Loading...</p>
+      ) : (*/}
+      <Restaurant />
     </div>
   );
-}
+};
 
 export default Resto;

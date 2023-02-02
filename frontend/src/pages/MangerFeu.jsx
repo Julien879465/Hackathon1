@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
 
-function MangerFeu() {
+function MangerFeu({ setSelectedRestaurant }) {
   // faire le fetch ici en filtrant sur feu
   const [data, setData] = useState([]);
-
+  /*const { setSelectedRestaurant } = useUserContext();*/
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -22,6 +21,9 @@ function MangerFeu() {
       })
       .catch((err) => console.error(err));
   }, []);
+  const handleSelection = (e) => {
+    navigate("/Resto");
+  };
 
   return (
     <div className="flex flex-col items-start justify-around w-full p-auto px-7 bg-bg-sable">
@@ -48,7 +50,10 @@ function MangerFeu() {
               feu.cuisine === "Fast-Food"
           )
           .map((restaurant) => (
-            <div
+            <button
+              type="button"
+              onClick={handleSelection}
+              value={restaurant.id}
               className="bg-white rounded-xl flex flex-col my-4 "
               key={restaurant.id}
             >
@@ -61,7 +66,7 @@ function MangerFeu() {
                 <h2 className="text-base">{restaurant.restaurant_name}</h2>
                 <p className="text-xl">{restaurant.rating}/5</p>
               </div>
-            </div>
+            </button>
           ))}
       </div>
     </div>
