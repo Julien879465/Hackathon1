@@ -42,6 +42,8 @@ module.exports = withMT({
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      "bg-sable": "#F1E4D1",
+      brown: "#9A7A49",
     }),
     columns: {
       auto: "auto",
@@ -154,6 +156,8 @@ module.exports = withMT({
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl":
         "linear-gradient(to top left, var(--tw-gradient-stops))",
+        "bg-home": "url('./assets/img/eucal-1.png')",
+        "bg-stone": "url('./assets/img/stone-1.png')",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {
@@ -367,22 +371,7 @@ module.exports = withMT({
       DEFAULT: "1",
     },
     fontFamily: {
-      sans: [
-        "ui-sans-serif",
-        "system-ui",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        '"Noto Sans"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
+      sans: ["Raleway"],
       serif: [
         "ui-serif",
         "Georgia",
@@ -401,6 +390,7 @@ module.exports = withMT({
         '"Courier New"',
         "monospace",
       ],
+      cursive: ["Londrina Solid"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

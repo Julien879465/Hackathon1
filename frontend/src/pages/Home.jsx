@@ -1,36 +1,21 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import ham1 from"../assets/img/ham1.png";
+import HUB from"../assets/img/HUB.png";
+
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <body class="bg-bg-sable h-full">
+      <div className="bg-bg-home h-80 bg-no-repeat top-0"></div>
+      <div className="text-center">
+        <div className="flex flex-col items-center">
+        <img src={HUB} alt="clickable ham" className="w-64 h-16 mb-2"/>
+        </div>
+        <p className="font-cursive text-2xl">Arrêter de mourir de faim ?</p>
+        <a href="" className="inline-block">
+        <img src={ham1} alt="clickable ham" className="w-40 h-40 m-20"/>
+      </a>
+    </div>
+    <div className="h-60 bg-no-repeat bottom-0 bg-right bg-bg-stone"></div>
+  </body>
   );
 }
