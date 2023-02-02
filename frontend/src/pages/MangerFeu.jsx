@@ -16,7 +16,7 @@ function MangerFeu() {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}restaurants`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/restaurants`)
       .then((res) => {
         setData(res.data);
       })
