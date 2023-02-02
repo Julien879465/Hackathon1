@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
@@ -26,20 +27,22 @@ function MangerFeu() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start justify-around w-full p-auto px-7 bg-bg-sable">
-      <div className="flex flex-row w-full justify-evenly items-center">
-        <button
-          type="button"
-          className="bg-white rounded-full h-[30px] w-[30px] flex items-center justify-center"
-          onClick={handleClick}
-        >
-          <img src={back} alt="go back" />
-        </button>
+    <>
+      <Navbar />
+      <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7 bg-bg-sable">
+        <div className="flex flex-row w-full justify-evenly items-center">
+          <button
+            type="button"
+            className="bg-white rounded-full h-[30px] w-[30px] flex items-center justify-center"
+            onClick={handleClick}
+          >
+            <img src={back} alt="go back" />
+          </button>
 
-        <h1 className="py-5 font-sans font-semibold text-xl">
-          MANGER ? Manger feu ! 🔥
-        </h1>
-      </div>
+          <h1 className="py-5 font-sans font-semibold text-xl">
+            MANGER ? Manger feu ! 🔥
+          </h1>
+        </div>
 
       <div className="z-10 flex flex-col justify-evenly p-auto m-auto">
         {data
@@ -63,8 +66,9 @@ function MangerFeu() {
                 <h2 className="text-base">{restaurant.restaurant_name}</h2>
                 <p className="text-xl">{restaurant.rating}/5</p>
               </div>
-            </div>
-          ))}
+              </div>
+            ))}
+        
       </div>
       <img src={flamme} alt="flamme" className="z-0 fixed top-[10%] left-0" />
       <img
@@ -73,6 +77,7 @@ function MangerFeu() {
         className="z-0 fixed bottom-[10%] right-0"
       />
     </div>
+    </>
   );
 }
 

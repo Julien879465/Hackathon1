@@ -44,6 +44,7 @@ module.exports = withMT({
       rose: colors.rose,
       "bg-sable": "#F1E4D1",
       brown: "#9A7A49",
+      navbar: "#D8BC93",
     }),
     columns: {
       auto: "auto",
