@@ -55,7 +55,9 @@ function MangerFeu({ setSelectedRestaurant }) {
                 feu.cuisine === "Fast-Food"
             )
             .map((restaurant) => (
-              <div
+              <button
+                type="button"
+                onClick={handleSelection}
                 className="bg-white rounded-xl flex flex-col my-4 shadow-2xl drop-shadow-xl "
                 key={restaurant.id}
               >
@@ -68,7 +70,7 @@ function MangerFeu({ setSelectedRestaurant }) {
                   <h2 className="text-base">{restaurant.restaurant_name}</h2>
                   <p className="text-xl">{restaurant.rating}/5</p>
                 </div>
-              </div>
+              </button>
             ))}
         </div>
         <img src={flamme} alt="flamme" className="z-0 fixed top-[10%] left-0" />
