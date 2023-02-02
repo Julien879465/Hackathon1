@@ -1,11 +1,14 @@
-import Manger from "@pages/Manger";
+import { Routes, Route } from "react-router-dom";
 import { UserContextProvider } from "./contexts/UserContext";
+import Personnages from "./pages/Personnages";
 
 export default function App() {
   return (
     <UserContextProvider>
-      <div className="flex flex-col items-center w-full h-full m-auto bg-bg-sable px-4">
-        <Manger />
+      <div className="flex flex-col items-center h-full w-full">
+      <Routes>
+        <Route path="/personnages" element={<Personnages />} />
+      </Routes>
       </div>
     </UserContextProvider>
   );
