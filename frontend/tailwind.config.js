@@ -156,6 +156,8 @@ module.exports = withMT({
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl":
         "linear-gradient(to top left, var(--tw-gradient-stops))",
+        "bg-home": "url('./assets/img/eucal-1.png')",
+        "bg-stone": "url('./assets/img/stone-1.png')",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {
