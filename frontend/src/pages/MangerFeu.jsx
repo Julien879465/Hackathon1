@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
-import Pizzeria from "../assets/img/Pizzeria.png";
 
 function MangerFeu() {
   // faire le fetch ici en filtrant sur feu
@@ -17,7 +16,7 @@ function MangerFeu() {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}restaurants`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/restaurants`)
       .then((res) => {
         setData(res.data);
       })
@@ -25,7 +24,7 @@ function MangerFeu() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7">
+    <div className="flex flex-col items-start justify-around w-full p-auto px-7 bg-bg-sable">
       <div className="flex flex-row w-full justify-evenly items-center">
         <button
           type="button"
@@ -40,7 +39,7 @@ function MangerFeu() {
         </h1>
       </div>
 
-      <div className="flex flex-col justify-around h-full p-auto m-auto">
+      <div className="flex flex-col justify-evenly p-auto m-auto">
         {data
           .filter(
             (feu) =>
@@ -49,8 +48,15 @@ function MangerFeu() {
               feu.cuisine === "Fast-Food"
           )
           .map((restaurant) => (
-            <div className="bg-white rounded-xl p-auto" key={restaurant.id}>
-              <img src={Pizzeria} alt="Pizza" />
+            <div
+              className="bg-white rounded-xl flex flex-col my-4 "
+              key={restaurant.id}
+            >
+              <img
+                className="aspect-video rounded-t-lg"
+                src={restaurant.url}
+                alt="Pizza"
+              />
               <div className="flex justify-between font-sans font-semibold p-3">
                 <h2 className="text-base">{restaurant.restaurant_name}</h2>
                 <p className="text-xl">{restaurant.rating}/5</p>
