@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import eucalyptus from "../assets/img/eucalyptus 1.svg";
+import Popup from "../components/Popup";
 
 function Manger() {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ function Manger() {
         >
           Manger feuille ? 🌿
         </button>
+        <Popup />
       </div>
     </>
   );
