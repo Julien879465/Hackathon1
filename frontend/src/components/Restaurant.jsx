@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function Restaurant() {
+function Restaurant({ selectedRestaurant }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -13,15 +13,15 @@ function Restaurant() {
       .catch((err) => console.error(err));
   }, []);
 
-  console.log(data);
+  console.log(selectedRestaurant);
+
   return (
     <div>
       <ul>
         {data
-          .filter((restoName) => restoName.restaurant_name === "Dino Delizioso")
+          .filter((y) => y.restaurant_name === selectedRestaurant)
           .map((menu) => (
             <li key={menu.id}>
-              {menu.restaurant_name}
               {menu.name_menu}
               {menu.description_menu}
               <img src={menu.image_url}></img>

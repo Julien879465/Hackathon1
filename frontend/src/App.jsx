@@ -11,6 +11,7 @@ import Panier from "./pages/Panier";
 
 export default function App() {
   const [selectedRestaurant, setSelectedRestaurant] = useState("");
+  console.log(selectedRestaurant);
 
   return (
     <BrowserRouter>
@@ -22,13 +23,21 @@ export default function App() {
           <Route
             path="/mangerfeu"
             element={
-              <MangerFeu setSelectedRestaurant={setSelectedRestaurant} />
+              <MangerFeu
+                selectedRestaurant={selectedRestaurant}
+                setSelectedRestaurant={setSelectedRestaurant}
+              />
             }
           />
           <Route path="/mangerfeuille" element={<MangerFeuille />} />
           <Route
             path="/Resto"
-            element={<Resto selectedRestaurant={selectedRestaurant} />}
+            element={
+              <Resto
+                setSelectedRestaurant={setSelectedRestaurant}
+                selectedRestaurant={selectedRestaurant}
+              />
+            }
           />
           <Route path="/changertoi" element={<ChangerToi />} />
           <Route path="/panier" element={<Panier />} />

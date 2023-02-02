@@ -3,13 +3,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Restaurant from "@components/restaurant";
 
-const Resto = () => {
+function Resto({ selectedRestaurant }) {
   const [data, setData] = useState([]);
+  console.log(selectedRestaurant);
 
-  /* const [loading, setLoading] = useState(false);*/
-  /*const { selectedRestaurant } = useUserContext();*/
-
-  /* console.log(data);*/
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/restaurants`)
@@ -18,24 +15,22 @@ const Resto = () => {
       })
       .catch((err) => console.error(err));
   }, []);
+  console.log(data);
 
   return (
     <div>
       {data
-        .filter((elem) => elem.cuisine === "Italien")
+        .filter((x) => x.restaurant_name === selectedRestaurant)
         .map((elem) => (
           <li key={elem.id}>
-            <img src={elem.url}></img>
+            <img src={elem.url} />
+            <h1>{elem.restaurant_name}</h1>
           </li>
         ))}
 
-      <h2>Menus for </h2>
-      {/*{loading ? (
-        <p>Loading...</p>
-      ) : (*/}
-      <Restaurant />
+      <Restaurant selectedRestaurant={selectedRestaurant} />
     </div>
   );
-};
+}
 
 export default Resto;

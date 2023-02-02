@@ -6,7 +6,7 @@ import back from "../assets/icons/chevron-left.svg";
 import flamme from "../assets/img/flame.png";
 import flammeRight from "../assets/img/flameright.png";
 
-function MangerFeu({ setSelectedRestaurant }) {
+function MangerFeu({ selectedRestaurant, setSelectedRestaurant }) {
   // faire le fetch ici en filtrant sur feu
   const [data, setData] = useState([]);
   /*const { setSelectedRestaurant } = useUserContext();*/
@@ -24,9 +24,12 @@ function MangerFeu({ setSelectedRestaurant }) {
       })
       .catch((err) => console.error(err));
   }, []);
+
   const handleSelection = (e) => {
-    navigate("/Resto");
+    setSelectedRestaurant(e.target.key);
+    // navigate("/Resto");
   };
+  console.log(selectedRestaurant);
 
   return (
     <>
@@ -57,7 +60,10 @@ function MangerFeu({ setSelectedRestaurant }) {
             .map((restaurant) => (
               <button
                 type="button"
-                onClick={handleSelection}
+                onClick={() => {
+                  setSelectedRestaurant(restaurant.restaurant_name);
+                  navigate("/Resto");
+                }}
                 className="bg-white rounded-xl flex flex-col my-4 shadow-2xl drop-shadow-xl "
                 key={restaurant.id}
               >
