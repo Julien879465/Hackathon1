@@ -15,7 +15,7 @@ function Manger() {
   };
   return (
     <>
-      <div className="flex flex-col items-start justify-around w-full px-4">
+      <div className="z-20 flex flex-col items-start justify-around w-full px-4">
         <img
           src={eucalyptus}
           alt="eucalyptus"
