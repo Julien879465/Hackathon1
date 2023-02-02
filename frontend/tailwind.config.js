@@ -116,6 +116,7 @@ module.exports = withMT({
       ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
+      wiggle: "wiggle 1s ease-in-out infinite",
     },
     aria: {
       checked: 'checked="true"',
@@ -156,8 +157,8 @@ module.exports = withMT({
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl":
         "linear-gradient(to top left, var(--tw-gradient-stops))",
-        "bg-home": "url('./assets/img/eucal-1.png')",
-        "bg-stone": "url('./assets/img/stone-1.png')",
+      "bg-home": "url('./assets/img/eucal-1.png')",
+      "bg-stone": "url('./assets/img/stone-1.png')",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {
@@ -595,6 +596,10 @@ module.exports = withMT({
           transform: "none",
           animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
         },
+      },
+      wiggle: {
+        "0%, 100%": { transform: "rotate(-3deg)" },
+        "50%": { transform: "rotate(3deg)" },
       },
     },
     letterSpacing: {

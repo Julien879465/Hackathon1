@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center h-full">
         <a href="/personnages">
-       <img src={ham1} alt="clickable ham" className="w-40 h-40 m-20"/>
+       <img src={ham1} alt="clickable ham" className="w-40 h-40 m-20 animate-wiggle"/>
        </a>
        <img src={stone1} alt="stone" className="z-0 fixed right-0 bottom-0"/>
     </div>
