@@ -1,5 +1,4 @@
 import ham1 from "../assets/img/ham1.png";
-import HUB from "../assets/img/HUB.png";
 import stone1 from "../assets/img/stone-1.png";
 import plante from "../assets/backgrounds/eucalyptus.png";
 
@@ -11,12 +10,16 @@ export default function Home() {
           <img
             src={plante}
             alt="eucalyptus"
-            className=" z-0 fixed left-0 top-0"
+            className=" z-0 fixed left-0 top-0 md:h-[300px]"
           />
-          <img src={HUB} alt="LOGO" className="w-64 h-16 mb-2" />
+          <p className="font-cursive text-brown text-7xl pb-3 md:text-8xl">
+            HUUU BERT
+          </p>
         </div>
         <div>
-          <p className="font-cursive text-2xl">Arrêter de mourir de faim ?</p>
+          <p className="font-cursive text-2xl md:text-3xl">
+            Arrêter de mourir de faim ?
+          </p>
         </div>
         <div className="flex items-center justify-center h-full">
           <a className="z-50" href="/personnages">
