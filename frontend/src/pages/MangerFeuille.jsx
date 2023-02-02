@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
 import Pizzeria from "../assets/img/Pizzeria.png";
 
-function MangerFeu() {
+function MangerFeuille() {
   // faire le fetch ici en filtrant sur feu
   const [data, setData] = useState([]);
 
@@ -36,7 +35,7 @@ function MangerFeu() {
         </button>
 
         <h1 className="py-5 font-sans font-semibold text-xl">
-          MANGER ? Manger feu ! 🔥
+          MANGER ? Manger feuille ! 🌿
         </h1>
       </div>
 
@@ -44,9 +43,9 @@ function MangerFeu() {
         {data
           .filter(
             (feu) =>
-              feu.cuisine === "Italien" ||
-              feu.cuisine === "gastronomique" ||
-              feu.cuisine === "Fast-Food"
+              feu.cuisine === "Pokébowl" ||
+              feu.cuisine === "Sushi" ||
+              feu.cuisine === "Bar à fruits"
           )
           .map((restaurant) => (
             <div className="bg-white rounded-xl p-auto" key={restaurant.id}>
@@ -62,4 +61,4 @@ function MangerFeu() {
   );
 }
 
-export default MangerFeu;
+export default MangerFeuille;

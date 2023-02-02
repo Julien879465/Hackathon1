@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import MangerFeu from "@pages/MangerFeu";
-import MangerFeuille from "@pages/MangerFeuille";
+import MangerFeu from "./pages/MangerFeu";
+import MangerFeuille from "./pages/MangerFeuille";
 import Personnages from "./pages/Personnages";
 import Manger from "./pages/Manger";
 import { UserContextProvider } from "./contexts/UserContext";
