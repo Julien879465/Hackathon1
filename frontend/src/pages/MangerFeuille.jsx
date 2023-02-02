@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
-import Pizzeria from "../assets/img/Pizzeria.png";
 
 function MangerFeuille() {
   // faire le fetch ici en filtrant sur feu
