@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import { UserContextProvider } from "./contexts/UserContext";
-import Personnages from "./pages/Personnages";
-import Manger from "./pages/Manger";
 import MangerFeu from "@pages/MangerFeu";
 import MangerFeuille from "@pages/MangerFeuille";
+import Personnages from "./pages/Personnages";
+import Manger from "./pages/Manger";
+import { UserContextProvider } from "./contexts/UserContext";
 
 export default function App() {
   return (
