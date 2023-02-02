@@ -41,12 +41,24 @@ CREATE TABLE menu (
 );
 
 INSERT INTO menu (`id`, `restaurant_name`, `name_menu`, `description_menu`, `image_url`, `price`)
-VALUES (1, 'PokéMamouth', 'Pokébowl', 'un bol poisson cru légumes qui craquent', 'pokébowl.jpg', 10.99),
-       (2, 'Jurassic Sushi', 'Sushi', 'tranches poisson cru sur riz avec sauce marron', 'sushi.jpg', 12.99),
-       (3, 'Juicy Jungle', 'Fruits Bowl', 'bol fruits et baies', 'bol-fruits.jpg', 9.99),
-       (4, 'Dino Delizioso', 'Pizza', 'pain rond avec tomates', 'pizza.jpg', 14.99),
-       (5, 'Dino Delizioso', 'Pâtes', 'Pain pas cuit mouillé', 'pates.jpg', 14.99),
-       (6, 'Chez Pierre', 'viande', 'viand et patates', 'menu_gastro.jpg', 18.99),
-       (7, 'The Stone Age Kitchen', 'Hamburger', 'viande purée dans pain', 'fastfood.jpg', 8.99);
-
-
+VALUES (1, 'PokéMamouth', 'Pokébowl-1', 'Un bol poisson cru légumes qui craquent', 'pokebowl-saumon.jpg', 10.99),
+       (2, 'Jurassic Sushi', 'Maki', 'Roulé poisson cru et riz sur feuille noir', 'maki.jpg', 12.99),
+       (3, 'Juicy Jungle', 'Berries Bowl', 'Bol baies', 'baies.jpg', 9.99),
+       (4, 'Dino Delizioso', 'Pizza Margarita', 'Pain rond avec tomates', 'margarita.jpg', 14.99),
+       (5, 'Dino Delizioso', 'Carbonara', 'Pâtes avec crème et oeuf', 'carbonara.jpg', 14.99),
+       (6, 'Chez Pierre', 'Poulet basquaise', 'Poulet avec des trucs', 'basquaise.jpg', 18.99),
+       (7, 'The Stone Age Kitchen', 'Hamburger', 'viande purée dans pain', 'burger.jpg', 8.99),
+       (8, 'PokéMamouth', 'Pokébowl-2', 'Un bol pois chiche qui pique', 'pokefelafel.jpg', 10.99),
+       (9, 'Jurassic Sushi', 'Sashimi', 'Tranches poisson cru', 'sashimi.jpg', 12.99),
+       (10, 'Juicy Jungle', 'Exotic Bowl', 'Bol fruits où beaucoup soleil', 'salade-exotique.jpg', 9.99),
+       (11, 'Dino Delizioso', 'Pizza Pepperoni', 'Pain rond avec tomates rond viande', 'pepperoni.jpg', 14.99),
+       (12, 'Dino Delizioso', 'Pesto', 'Pâtes avec herbes verte', 'pesto.jpg', 14.99),
+       (13, 'Chez Pierre', 'Blanquette', 'Veau et carottes dans sauce', 'blanquette.jpg', 18.99),
+       (14, 'The Stone Age Kitchen', 'Chickenburger', 'Poulet purée dans pain', 'poulet.jpg', 8.99),
+       (15, 'PokéMamouth', 'Pokébowl-3', 'bol poisson cru ', 'menupoké.jpg', 10.99),
+       (16, 'Jurassic Sushi', 'California', 'Roulé poisson riz avec graines et poisson cru', 'california-roll.jpg', 12.99),
+       (17, 'Juicy Jungle', 'Orange', 'Orange à boire', 'orange.jpg', 9.99),
+       (18, 'Dino Delizioso', 'Pizza 4 saisons', 'Pain rond avec tomates et truc qui pousse dans la terre', '4saison.jpg', 14.99),
+       (19, 'Dino Delizioso', 'Bolognaise', 'Pâtes sauce tomate et viaaande', 'bolognaise.jpg', 14.99),
+       (20, 'Chez Pierre', 'Homard', 'Homard (insect de la mer)', 'homard.jpg', 18.99),
+       (21, 'The Stone Age Kitchen', 'Hamburger', 'viande purée dans pain', 'fastfood.jpg', 8.99);
