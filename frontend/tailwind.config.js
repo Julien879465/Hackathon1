@@ -42,6 +42,8 @@ module.exports = withMT({
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      "bg-sable": "#F1E4D1",
+      brown: "#9A7A49",
     }),
     columns: {
       auto: "auto",
@@ -367,22 +369,7 @@ module.exports = withMT({
       DEFAULT: "1",
     },
     fontFamily: {
-      sans: [
-        "ui-sans-serif",
-        "system-ui",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        '"Noto Sans"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
+      sans: ["Raleway"],
       serif: [
         "ui-serif",
         "Georgia",
@@ -401,6 +388,7 @@ module.exports = withMT({
         '"Courier New"',
         "monospace",
       ],
+      cursive: ["Londrina Solid"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
