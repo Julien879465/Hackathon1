@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import eucalyptus from "../assets/img/eucalyptus 1.svg";
+import Popup from "../components/Popup";
 import Navbar from "../components/Navbar";
 
 function Manger() {
@@ -17,7 +18,7 @@ function Manger() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-start justify-around w-full px-4">
+      <div className="z-20 flex flex-col items-start justify-around w-full px-4">
         <img
           src={eucalyptus}
           alt="eucalyptus"
@@ -33,7 +34,7 @@ function Manger() {
           value="feu"
           onClick={handleClick}
         >
-          Manger feu ?
+          Manger feu ? 🔥
         </button>
         <button
           type="button"
@@ -41,8 +42,9 @@ function Manger() {
           value="feuille"
           onClick={handleClick}
         >
-          Manger feuille ?
+          Manger feuille ? 🌿
         </button>
+        <Popup />
       </div>
     </>
   );

@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
+import flamme from "../assets/img/flame.png";
+import flammeRight from "../assets/img/flameright.png";
 
 function MangerFeu() {
   // faire le fetch ici en filtrant sur feu
@@ -27,7 +29,7 @@ function MangerFeu() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7">
+      <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7 bg-bg-sable">
         <div className="flex flex-row w-full justify-evenly items-center">
           <button
             type="button"
@@ -42,32 +44,39 @@ function MangerFeu() {
           </h1>
         </div>
 
-        <div className="flex flex-col justify-around h-full p-auto m-auto">
-          {data
-            .filter(
-              (feu) =>
-                feu.cuisine === "Italien" ||
-                feu.cuisine === "gastronomique" ||
-                feu.cuisine === "Fast-Food"
-            )
-            .map((restaurant) => (
-              <div
-                className="bg-white rounded-xl flex flex-col "
-                key={restaurant.id}
-              >
-                <img
-                  className="aspect-video rounded-md"
-                  src={restaurant.url}
-                  alt="Pizza"
-                />
-                <div className="flex justify-between font-sans font-semibold p-3">
-                  <h2 className="text-base">{restaurant.restaurant_name}</h2>
-                  <p className="text-xl">{restaurant.rating}/5</p>
-                </div>
+      <div className="z-10 flex flex-col justify-evenly p-auto m-auto">
+        {data
+          .filter(
+            (feu) =>
+              feu.cuisine === "Italien" ||
+              feu.cuisine === "gastronomique" ||
+              feu.cuisine === "Fast-Food"
+          )
+          .map((restaurant) => (
+            <div
+              className="bg-white rounded-xl flex flex-col my-4 "
+              key={restaurant.id}
+            >
+              <img
+                className="aspect-video rounded-t-lg"
+                src={restaurant.url}
+                alt="Pizza"
+              />
+              <div className="flex justify-between font-sans font-semibold p-3">
+                <h2 className="text-base">{restaurant.restaurant_name}</h2>
+                <p className="text-xl">{restaurant.rating}/5</p>
+              </div>
               </div>
             ))}
-        </div>
+        
       </div>
+      <img src={flamme} alt="flamme" className="z-0 fixed top-[10%] left-0" />
+      <img
+        src={flammeRight}
+        alt="flamme"
+        className="z-0 fixed bottom-[10%] right-0"
+      />
+    </div>
     </>
   );
 }

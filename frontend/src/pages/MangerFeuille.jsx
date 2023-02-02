@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
 import Navbar from "../components/Navbar";
+import eucalLeft from "../assets/img/eucal-left.png";
+import eucalRight from "../assets/img/eucal-right.png";
 
 function MangerFeuille() {
   // faire le fetch ici en filtrant sur feu
@@ -26,7 +28,7 @@ function MangerFeuille() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7">
+      <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7 bg-bg-sable">
         <div className="flex flex-row w-full justify-evenly items-center">
           <button
             type="button"
@@ -41,7 +43,7 @@ function MangerFeuille() {
           </h1>
         </div>
 
-        <div className="flex flex-col justify-around h-full p-auto m-auto">
+        <div className="z-10 flex flex-col justify-evenly p-auto m-auto">
           {data
             .filter(
               (feu) =>
@@ -50,10 +52,13 @@ function MangerFeuille() {
                 feu.cuisine === "Bar à fruits"
             )
             .map((restaurant) => (
-              <div className="bg-white rounded-xl p-auto" key={restaurant.id}>
+              <div
+                className="bg-white rounded-xl p-auto my-4"
+                key={restaurant.id}
+              >
                 <img
                   className="aspect-video
-                rounded-md "
+                rounded-t-xl "
                   src={restaurant.url}
                   alt="Affiche restaurant"
                 />
@@ -65,6 +70,16 @@ function MangerFeuille() {
             ))}
         </div>
       </div>
+      <img
+        src={eucalLeft}
+        alt="flamme"
+        className="z-0 fixed top-[15%] left-0"
+      />
+      <img
+        src={eucalRight}
+        alt="flamme"
+        className="z-0 fixed bottom-[15%] right-0"
+      />
     </>
   );
 }
