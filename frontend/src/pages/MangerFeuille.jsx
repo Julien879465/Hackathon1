@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
+import Navbar from "../components/Navbar";
 import eucalLeft from "../assets/img/eucal-left.png";
 import eucalRight from "../assets/img/eucal-right.png";
 
@@ -26,7 +27,8 @@ function MangerFeuille() {
 
   return (
     <>
-      <div className="flex flex-col items-start justify-around w-full h-auto px-7 bg-bg-sable">
+      <Navbar />
+      <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7 bg-bg-sable">
         <div className="flex flex-row w-full justify-evenly items-center">
           <button
             type="button"
