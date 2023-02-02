@@ -55,7 +55,10 @@ function Personnages() {
                   <h2 className="relative bottom-5 bg-slate-900 font-sans text-white   w-1/3 text-center rounded-md">
                     {elem.nom}
                   </h2>
-                  <button className="relative bottom-1/2 left-[100px] text-center bg-bg-sable  rounded-full w-32 h-10 text-brown  font-cursive text-3xl animate-pulse">
+                  <button
+                    type="button"
+                    className="relative bottom-1/2 left-[100px] text-center bg-bg-sable  rounded-full w-32 h-10 text-brown  font-cursive text-3xl animate-pulse"
+                  >
                     Moi
                   </button>
                 </div>
