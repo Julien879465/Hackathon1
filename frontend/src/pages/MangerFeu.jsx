@@ -54,11 +54,11 @@ function MangerFeu() {
             )
             .map((restaurant) => (
               <div
-                className="bg-white rounded-xl flex flex-col my-4 "
+                className="bg-white rounded-xl flex flex-col my-4 shadow-2xl drop-shadow-xl "
                 key={restaurant.id}
               >
                 <img
-                  className="aspect-video rounded-t-lg"
+                  className="aspect-video rounded-t-lg "
                   src={restaurant.url}
                   alt="Pizza"
                 />

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className=" flex items-center justify-center w-full h-full">
       <div className="text-center">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center ">
           <img
             src={plante}
             alt="eucalyptus"
@@ -26,7 +26,7 @@ export default function Home() {
             <img
               src={ham1}
               alt="clickable ham"
-              className="z-50 w-40 h-40 m-20 animate-wiggle"
+              className="z-50 w-40 h-40 m-20 drop-shadow-xl animate-wiggle"
             />
           </a>
           <img
