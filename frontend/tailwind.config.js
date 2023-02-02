@@ -157,8 +157,13 @@ module.exports = withMT({
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl":
         "linear-gradient(to top left, var(--tw-gradient-stops))",
-      "bg-home": "url('./assets/img/eucal-1.png')",
-      "bg-stone": "url('./assets/img/stone-1.png')",
+      home: "url('./assets/img/eucal-1.png')",
+      stone: "url('./assets/img/stone-1.png')",
+      pokébowl: "url('./assets/img/pokébowl.jpg')",
+      sushi: "url('./assets/img/sushi.jpg')",
+      "bol-fruits": "url('./assets/img/bol-fruits.jpg')",
+      "pizzeria pates": "url('./assets/img/bol-fruits.jpg",
+      fastfood: "url('./assets/img/fastfood.jpg)",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {

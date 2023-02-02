@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
-import Pizzeria from "../assets/img/Pizzeria.png";
 
 function MangerFeu() {
   // faire le fetch ici en filtrant sur feu
@@ -49,8 +48,15 @@ function MangerFeu() {
               feu.cuisine === "Fast-Food"
           )
           .map((restaurant) => (
-            <div className="bg-white rounded-xl p-auto" key={restaurant.id}>
-              <img src={Pizzeria} alt="Pizza" />
+            <div
+              className="bg-white rounded-xl flex flex-col "
+              key={restaurant.id}
+            >
+              <img
+                className="aspect-video rounded-md"
+                src={restaurant.url}
+                alt="Pizza"
+              />
               <div className="flex justify-between font-sans font-semibold p-3">
                 <h2 className="text-base">{restaurant.restaurant_name}</h2>
                 <p className="text-xl">{restaurant.rating}/5</p>
