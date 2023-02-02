@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
 import Pizzeria from "../assets/img/Pizzeria.png";
 
 function MangerFeu() {
   // faire le fetch ici en filtrant sur feu
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}restaurants`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  // useEffect(() => {
+  //   axios.get(`${import.meta.env.VITE_BACKEND_URL}/dreams`).then((res) => {
+  //     setData(res.data);
+  //     setPopUp(res.data.map((elem) => ({ ...elem, quantity: 0 })));
+  //   });
+  // }, []);
+
+  console.log(data);
 
   return (
     <>
@@ -22,21 +42,22 @@ function MangerFeu() {
         </div>
 
         <div className="flex flex-col justify-around h-full p-auto m-auto">
-          {/* faire le map ici */}
-          <div className="bg-white rounded-xl p-auto">
-            <img src={Pizzeria} alt="Pizza" />
-            <div className="flex justify-between font-sans font-semibold p-3">
-              <h2 className="text-base">Nom du resto</h2>
-              <p className="text-xl">4/5</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-xl p-auto">
-            <img src={Pizzeria} alt="Pizza" />
-            <div className="flex justify-between font-sans font-semibold p-3">
-              <h2 className="text-base">Nom du resto</h2>
-              <p className="text-xl">4/5</p>
-            </div>
-          </div>
+          {data
+            .filter(
+              (feu) =>
+                feu.cuisine === "Italien" ||
+                feu.cuisine === "gastronomique" ||
+                feu.cuisine === "Fast-Food"
+            )
+            .map((restaurant) => (
+              <div className="bg-white rounded-xl p-auto">
+                <img src={Pizzeria} alt="Pizza" />
+                <div className="flex justify-between font-sans font-semibold p-3">
+                  <h2 className="text-base">{restaurant.restaurant_name}</h2>
+                  <p className="text-xl">{restaurant.rating}/5</p>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </>
