@@ -4,18 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
-    * {
-      @apply box-border;
-    }
-  
-    html,
-    body,
-    #root {
-      @apply h-screen w-screen;
-    }
-    
-    #root{
-        @apply flex flex-col justify-between items-center w-full
-    }
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body,
+  #root {
+    @apply h-screen w-screen;
+  }
+
+  #root {
+    @apply flex flex-col justify-between items-center w-full;
+  }
 }
