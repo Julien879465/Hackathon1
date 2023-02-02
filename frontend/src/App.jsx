@@ -1,16 +1,15 @@
-import Navbar from "@components/Navbar";
-import { Button } from "@material-tailwind/react";
+import { Routes, Route } from "react-router-dom";
+
 import { UserContextProvider } from "./contexts/UserContext";
+import Personnages from "./pages/Personnages";
 
 export default function App() {
   return (
     <UserContextProvider>
-      <div className="flex flex-col justify-between items-center w-full">
-        <Navbar />
-        <h1 className="text-3xl font-bold underline text-yellow-500	bg-red-500	">
-          Hello world!
-        </h1>
-        <Button className="bg-indigo-400">Button</Button>
+      <div className="flex flex-col items-center h-full w-full">
+      <Routes>
+        <Route path="/personnages" element={<Personnages />} />
+      </Routes>
       </div>
     </UserContextProvider>
   );
