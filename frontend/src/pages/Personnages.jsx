@@ -24,9 +24,7 @@ function Personnages() {
     <>
       <Navbar />
       <div className="flex flex-col bg-bg-sable w-full h-full justify-around items-center">
-        <h1 className="z-10 font-cursive text-4xl text-brown">
-          TOI ?
-        </h1>
+        <h1 className="z-10 font-cursive text-4xl text-brown">TOI ?</h1>
         <img
           src={plante}
           alt="eucalyptus"
@@ -38,7 +36,7 @@ function Personnages() {
           className=" z-0 fixed right-0 bottom-0"
         />
         <select
-          className="z-10 rounded-full w-[80%] h-11 text-center"
+          className="z-10 rounded-full w-[80%] h-11 text-center shadow-2xl drop-shadow-xl"
           name="selectName"
           onChange={(e) => setSelectedName(e.target.value)}
         >
@@ -48,13 +46,13 @@ function Personnages() {
           <option value="Broud">Broud</option>
           <option value="Grok">Grok</option>
         </select>
-        <div className="z-0 flex flex-wrap justify-evenly">
+        <div className="z-0 flex flex-wrap justify-evenly ">
           {selectedName === ""
             ? personnage.map((elem) => (
                 <div className="w-2/5">
                   <img
                     key={elem.nom}
-                    className="rounded-md"
+                    className="rounded-md shadow-2xl drop-shadow-xl"
                     src={elem.img}
                     alt={elem.nom}
                     onClick={() => navigate("/manger")}
@@ -67,10 +65,10 @@ function Personnages() {
             : personnage
                 .filter((elem) => elem.nom === selectedName)
                 .map((elem) => (
-                  <div className="z-10 h-[495px] w-4/5">
+                  <div className="z-10 h-[495px]  w-4/5">
                     <img
                       key={elem.nom}
-                      className="z-10 rounded-md "
+                      className="z-10 rounded-md shadow-2xl drop-shadow-xl "
                       src={elem.img}
                       alt={elem.nom}
                     />
@@ -79,7 +77,7 @@ function Personnages() {
                     </h2>
                     <button
                       type="button"
-                      className="z-10 relative bottom-1/2 left-[100px] text-center bg-bg-sable  rounded-full w-32 h-10 text-brown  font-cursive text-3xl animate-pulse"
+                      className="z-10 relative bottom-1/2 left-[100px] text-center bg-bg-sable  rounded-full w-32 h-10 text-brown  font-cursive text-3xl drop-shadow-xl animate-pulse"
                       onClick={() => navigate("/manger")}
                     >
                       Moi

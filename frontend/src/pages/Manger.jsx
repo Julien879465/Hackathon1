@@ -30,7 +30,7 @@ function Manger() {
       <div className="flex flex-col justify-between text-xl font-semibold h-2/5 my-10">
         <button
           type="button"
-          className="bg-white py-14 rounded-xl mb-10"
+          className="bg-white py-14 rounded-xl mb-10  shadow-2xl drop-shadow-xl"
           value="feu"
           onClick={handleClick}
         >
@@ -38,7 +38,7 @@ function Manger() {
         </button>
         <button
           type="button"
-          className="bg-white p-14 rounded-xl"
+          className="bg-white p-14 rounded-xl shadow-2xl drop-shadow-xl"
           value="feuille"
           onClick={handleClick}
         >

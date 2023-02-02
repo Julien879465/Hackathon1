@@ -9,15 +9,15 @@ function ChangerToi() {
   };
 
   return (
-    <div className=" flex flex-col h-screen items-center justify-between">
+    <div className=" flex flex-col h-screen items-center justify-between ">
       <img
         src={voiture}
         alt="homme préhistorique en voiture"
-        className="w-full"
+        className="w-full shadow-2xl drop-shadow-xl"
       />
 
       <div className="fixed rounded-t-lg bottom-0 h-[45%] left-[10%] right-[10%] w-10/12 bg-white">
-        <div className="flex  rounded-t-lg flex-col items-center justify-evenly bg-white h-full">
+        <div className="flex  rounded-t-lg flex-col items-center justify-evenly bg-white h-full shadow-2xl drop-shadow-xl">
           <h1 className="font-cursive text-brown text-4xl">HUUU BERT</h1>
           <p className="font-sans font-semibold text-xl">
             arrive, pousse mammouth{" "}
