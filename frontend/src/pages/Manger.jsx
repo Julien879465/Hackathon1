@@ -27,7 +27,7 @@ function Manger() {
         <p className="py-5 font-cursive text-brown text-4xl md:mt-20 md:text-6xl md:pl-10"> HUUU BERT </p>
         <h1 className="py-10 text-xl font-semibold md:pl-10 md:text-2xl">MANGER ? Manger.</h1>
       </div>
-      <div className="flex flex-col justify-between text-xl font-semibold h-2/5 my-10 md:mt-20 md:h-1/2 md:w-full  md:flex md:flex-row md:50 md:justify-evenly md:text-2xl md:gap-6">
+      <div className="flex flex-col justify-between text-xl font-semibold h-2/5 my-10 md:mt-20 md:h-1/2 md:w-full md:flex md:flex-row md:50 md:justify-evenly md:text-2xl md:gap-6">
         <button
           type="button"
           className="bg-white py-14 rounded-xl mb-10 md:m-0 md:p-0 md:w-2/5 "
