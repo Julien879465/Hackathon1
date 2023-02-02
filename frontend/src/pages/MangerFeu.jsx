@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
+import flamme from "../assets/img/flame.png";
+import flammeRight from "../assets/img/flameright.png";
 
 function MangerFeu() {
   // faire le fetch ici en filtrant sur feu
@@ -39,7 +41,7 @@ function MangerFeu() {
         </h1>
       </div>
 
-      <div className="flex flex-col justify-evenly p-auto m-auto">
+      <div className="z-10 flex flex-col justify-evenly p-auto m-auto">
         {data
           .filter(
             (feu) =>
@@ -64,6 +66,12 @@ function MangerFeu() {
             </div>
           ))}
       </div>
+      <img src={flamme} alt="flamme" className="z-0 fixed top-[10%] left-0" />
+      <img
+        src={flammeRight}
+        alt="flamme"
+        className="z-0 fixed bottom-[10%] right-0"
+      />
     </div>
   );
 }
