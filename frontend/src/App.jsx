@@ -1,5 +1,3 @@
-import Navbar from "@components/Navbar";
-import { Button } from "@material-tailwind/react";
 import Manger from "@pages/Manger";
 import { UserContextProvider } from "./contexts/UserContext";
 
