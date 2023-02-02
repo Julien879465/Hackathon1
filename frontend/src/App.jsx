@@ -4,6 +4,7 @@ import MangerFeuille from "./pages/MangerFeuille";
 import Personnages from "./pages/Personnages";
 import Manger from "./pages/Manger";
 import { UserContextProvider } from "./contexts/UserContext";
+import Panier from "./pages/Panier";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/personnages" element={<Personnages />} />
           <Route path="/mangerfeu" element={<MangerFeu />} />
           <Route path="/mangerfeuille" element={<MangerFeuille />} />
+          <Route path="/panier" element={<Panier />} />
         </Routes>
       </div>
     </UserContextProvider>
