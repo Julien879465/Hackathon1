@@ -10,6 +10,7 @@ export default function Popup() {
 
   const [showModal, setShowModal] = React.useState(false);
   return (
+    <>
       <button
         className="bg-brown text-white font-sans font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
@@ -43,7 +44,6 @@ export default function Popup() {
                     className="mx-3 w-10 h-10"
                   />
                 </div>
-
                 <div className="flex items-center flex-col justify-end p-6 rounded-b">
                   <button
                     className="bg-brown text-white font-sans font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -63,6 +63,8 @@ export default function Popup() {
               </div>
             </div>
           </div>
+          <div>.</div>
+        </>
       ) : null}
     </>
   );
