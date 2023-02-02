@@ -1,19 +1,19 @@
 CREATE TABLE restaurant (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `restaurant_name` VARCHAR(255),
-  `restaurant_ìmage` VARCHAR(255),
   `cuisine` VARCHAR(255),
+  `url` VARCHAR(255),
   `adresse` VARCHAR(255),
   `rating` FLOAT
 );
 
-INSERT INTO restaurant (`restaurant_name`, `cuisine`, `adresse`, `rating`)
-VALUES ('PokéMamouth', 'Pokébowl', 'pokébowl.jpg''grotte numéro 12', 4.5),
-       ('Jurassic Sushi', 'Sushi', 'sushi.jpg''grotte numéro 4', 5),
-       ('Juicy Jungle', 'Bar à fruits', 'bol-fruits.jpg''grotte numéro 2', 4.8),
-       ('Dino Delizioso', 'Italien','pizzeria.jpg pates.jpg' 'grotte numéro 7', 4.3),
-       ('Chez Pierre', 'gastronomique', 'menu_gastro.jpg''grotte numéro 8', 4.9),
-       ('The Stone Age Kitchen', 'Fast-Food', 'fastfood.jpg''grotte numéro 11', 4.6);
+INSERT INTO restaurant (`id`, `restaurant_name`, `cuisine`, `url`, `adresse`, `rating`)
+VALUES (1,'PokéMamouth', 'Pokébowl', ' https://images.unsplash.com/photo-1670816978291-a5cf23d87968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', 'grotte numéro 12', 4.5),
+       (2,'Jurassic Sushi', 'Sushi', ' https://images.unsplash.com/photo-1607301406259-dfb186e15de8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1211&q=80', 'grotte numéro 4', 5),
+       (3,'Juicy Jungle', 'Bar à fruits', ' https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80', 'grotte numéro 2', 4.8),
+       (4,'Dino Delizioso', 'Italien','https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', 'grotte numéro 7', 4.3),
+       (5,'Chez Pierre', 'gastronomique', 'https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80', 'grotte numéro 8', 4.9),
+       (6,'The Stone Age Kitchen', 'Fast-Food', 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80', 'grotte numéro 11', 4.6);
 
 CREATE TABLE review (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
