@@ -41,7 +41,7 @@ function MangerFeu() {
         </h1>
       </div>
 
-      <div className="z-10 flex flex-col justify-evenly p-auto m-auto">
+      <div className="z-10 flex flex-col justify-evenly p-auto m-auto md:grid md:gap-x-8 md:gap-y-4 md:grid-cols-3 md:justify-between md:w-full ">
         {data
           .filter(
             (feu) =>
@@ -51,7 +51,7 @@ function MangerFeu() {
           )
           .map((restaurant) => (
             <div
-              className="bg-white rounded-xl flex flex-col my-4 "
+              className="bg-white rounded-xl flex flex-col my-4 md:flex md:flex-row md:1/3"
               key={restaurant.id}
             >
               <img
