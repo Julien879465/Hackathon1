@@ -6,9 +6,9 @@ export default function App() {
   return (
     <UserContextProvider>
       <div className="flex flex-col items-center h-full w-full">
-      <Routes>
-        <Route path="/personnages" element={<Personnages />} />
-      </Routes>
+        <Routes>
+          <Route path="/personnages" element={<Personnages />} />
+        </Routes>
       </div>
     </UserContextProvider>
   );
