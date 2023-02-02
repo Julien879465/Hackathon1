@@ -16,10 +16,10 @@ function ChangerToi() {
         <img
           src={voiture}
           alt="homme préhistorique en voiture"
-          className="w-full md:mt-10"
+          className="w-full md:mt-10  shadow-2xl drop-shadow-2xl"
         />
 
-        <div className="fixed rounded-t-lg bottom-0 h-[55%] md:h-[40%] w-10/12 bg-white drop-shadow-xl">
+        <div className="fixed rounded-t-lg bottom-0 h-[55%] md:h-[40%] w-10/12 bg-white  shadow-2xl drop-shadow-2xl">
           <div className="flex rounded-t-lg flex-col items-center bg-white h-full">
             <h1 className="font-cursive mt-12 mb-7 text-brown text-5xl md:text-8xl">
               HUUU BERT
