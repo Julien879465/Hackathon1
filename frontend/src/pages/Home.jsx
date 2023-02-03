@@ -12,7 +12,7 @@ export default function Home() {
             alt="eucalyptus"
             className=" z-0 fixed left-0 top-0 md:h-[300px]"
           />
-          <p className="font-cursive text-brown text-7xl pb-3 md:text-8xl">
+          <p className=" z-10 font-cursive text-brown text-7xl pb-3 md:text-8xl">
             HUUU BERT
           </p>
         </div>
