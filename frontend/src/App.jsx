@@ -50,15 +50,7 @@ export default function App() {
           />
           <Route path="/changertoi" element={<ChangerToi />} />
           <Route path="/panier" element={<Panier />} />
-          <Route
-            path="/commentaires"
-            element={
-              <Commentaires
-                setSelectedRestaurant={setSelectedRestaurant}
-                selectedRestaurant={selectedRestaurant}
-              />
-            }
-          />
+          <Route path="/commentaires" element={<Commentaires />} />
         </Routes>
       </div>
     </BrowserRouter>
