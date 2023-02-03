@@ -20,7 +20,7 @@ CREATE TABLE review (
   `restaurant_id` INT,
   `customer_name` VARCHAR(255),
   `review_text` TEXT, 
-  `rating` INT,
+  `rating` FLOAT,
   FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant`(`id`)
 );
 
