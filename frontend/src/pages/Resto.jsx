@@ -25,10 +25,10 @@ function Resto({ selectedRestaurant }) {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col justify-between items-center w-screen h-auto bg-bg-sable">
+      <div className="flex flex-col justify-between items-center w-screen h-auto  bg-bg-sable">
         <button
           type="button"
-          className="bg-white rounded-full h-[30px] w-[30px] top-10 left-5 fixed md:fixed md:top-20"
+          className="bg-white rounded-full h-[30px] w-[30px] top-10 left-5 fixed"
           onClick={handleClick}
         >
           <img src={back} alt="go back" />
@@ -39,23 +39,22 @@ function Resto({ selectedRestaurant }) {
           .map((elem) => (
             <div>
               <li className="list-none" key={elem.id}>
-                <h1 className="font-extrabold text-2xl mt-3 mx-7 md:text-4xl md:mt-10">
-                  {elem.restaurant_name}
-                </h1>
                 <img
                   className="aspect-video w-full"
                   src={elem.url}
                   alt="menu"
                 />
-                
+                <h1 className="font-extrabold mt-3 mx-7">
+                  {elem.restaurant_name}
+                </h1>
               </li>
             </div>
           ))}
-        <p className="m-2 mx-7 text-xl text-gray-700 md:text-2xl">
+        <p className="m-2 mx-7 text-gray-700">
           Ici, manger chaud, manger bon, manger gras. Pizzas, pâtes, beaucoup
           bon.
         </p>
-        <div className=" w-11/12 bg-bg-sable md:w-4/5 md:justify-between">
+        <div className=" w-11/12  bg-bg-sable">
           <Restaurant selectedRestaurant={selectedRestaurant} />
         </div>
       </div>
