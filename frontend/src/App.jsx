@@ -12,7 +12,6 @@ import CommandeConfirme from "@pages/CommandeConfirme";
 
 export default function App() {
   const [selectedRestaurant, setSelectedRestaurant] = useState("");
-  console.log(selectedRestaurant);
 
   return (
     <BrowserRouter>
