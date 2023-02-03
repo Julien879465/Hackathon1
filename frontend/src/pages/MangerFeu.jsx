@@ -25,12 +25,6 @@ function MangerFeu({ selectedRestaurant, setSelectedRestaurant }) {
       .catch((err) => console.error(err));
   }, []);
 
-  const handleSelection = (e) => {
-    setSelectedRestaurant(e.target.key);
-    // navigate("/Resto");
-  };
-  console.log(selectedRestaurant);
-
   return (
     <>
       <Navbar />
