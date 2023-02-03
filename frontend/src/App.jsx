@@ -11,7 +11,6 @@ import Panier from "./pages/Panier";
 
 export default function App() {
   const [selectedRestaurant, setSelectedRestaurant] = useState("");
-  console.log(selectedRestaurant);
 
   return (
     <BrowserRouter>

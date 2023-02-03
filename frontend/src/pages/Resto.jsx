@@ -5,7 +5,6 @@ import Restaurant from "@components/restaurant";
 
 function Resto({ selectedRestaurant }) {
   const [data, setData] = useState([]);
-  console.log(selectedRestaurant);
 
   useEffect(() => {
     axios
@@ -15,7 +14,6 @@ function Resto({ selectedRestaurant }) {
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(data);
 
   return (
     <div>

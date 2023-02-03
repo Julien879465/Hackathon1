@@ -4,9 +4,13 @@ import cailloux from "../assets/icons/cailloux.png";
 import Navbar from "../components/Navbar";
 
 function Panier() {
+  const menus = JSON.parse(localStorage.getItem("menus"));
   return (
     <>
       <Navbar />
+      {menus.map((poubelle) => (
+        <div>{poubelle.id}</div>
+      ))}
       <div className="px-4 flex flex-col h-full w-full justify-between">
         <img
           src={stone}
@@ -17,8 +21,7 @@ function Panier() {
           Sac de manger
         </h1>
         <h2 className="flex font-cursive text-4xl text-black justify-end">
-          {" "}
-          Donner cailloux ?{" "}
+          Donner cailloux ?
         </h2>
         <img className="w-[31px] h-[33px]" src={cailloux} alt="" />
         <div className="flex justify-center">
