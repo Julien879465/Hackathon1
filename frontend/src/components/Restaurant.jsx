@@ -24,7 +24,7 @@ function Restaurant({ selectedRestaurant }) {
             <li key={menu.id}>
               {menu.name_menu}
               {menu.description_menu}
-              <img src={menu.image_url}></img>
+              <img src={menu.image_url} />
               {menu.price}
             </li>
           ))}
