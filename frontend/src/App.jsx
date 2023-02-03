@@ -8,6 +8,7 @@ import ChangerToi from "./pages/ChangerToi";
 import Resto from "./pages/Resto";
 import Home from "./pages/Home";
 import Panier from "./pages/Panier";
+import CommandeConfirme from "@pages/CommandeConfirme";
 
 export default function App() {
   const [selectedRestaurant, setSelectedRestaurant] = useState("");
@@ -41,6 +42,7 @@ export default function App() {
           />
           <Route path="/changertoi" element={<ChangerToi />} />
           <Route path="/panier" element={<Panier />} />
+          <Route path="/commande" element={<CommandeConfirme />} />
         </Routes>
       </div>
     </BrowserRouter>

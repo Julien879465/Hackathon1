@@ -118,6 +118,7 @@ module.exports = withMT({
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
       wiggle: "wiggle 1s ease-in-out infinite",
+      once: "play 0s steps(1, end) 1",
     },
     aria: {
       checked: 'checked="true"',
@@ -165,6 +166,9 @@ module.exports = withMT({
       "bol-fruits": "url('./assets/img/bol-fruits.jpg')",
       "pizzeria pates": "url('./assets/img/bol-fruits.jpg",
       fastfood: "url('./assets/img/fastfood.jpg)",
+      caveman: "url(../assets/img/cavingWalkmen.gif)",
+      whitebg:
+        "url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dropizi.fr%2Fblog%2Fenlever-fond-image-transparent&psig=AOvVaw3EidpKAOGAvZLr3Pcv6bh0&ust=1675494349878000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMC3_P3k-PwCFQAAAAAdAAAAABAE)",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {
@@ -606,6 +610,14 @@ module.exports = withMT({
       wiggle: {
         "0%, 100%": { transform: "rotate(-3deg)" },
         "50%": { transform: "rotate(3deg)" },
+      },
+      once: {
+        "0%": {
+          backgroundImage: "url(../assets/img/cavingWalkmen.gif)",
+        },
+        "100%": {
+          backgroundImage: "url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dropizi.fr%2Fblog%2Fenlever-fond-image-transparent&psig=AOvVaw3EidpKAOGAvZLr3Pcv6bh0&ust=1675494349878000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMC3_P3k-PwCFQAAAAAdAAAAABAE)",
+        },
       },
     },
     letterSpacing: {
