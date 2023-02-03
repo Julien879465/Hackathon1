@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -27,12 +26,11 @@ export default function Navbar() {
           </button>
         </div>
         <div
-          className={
-            "flex flex-grow justify-between items-center" +
-            (navbarOpen
+          className={`flex flex-grow justify-between items-center${
+            navbarOpen
               ? "z-50 bottom-0 h-screen top-20 w-full flex flex-col  items-center md:flex-row md:justify-end text-xl "
-              : " hidden")
-          }
+              : " hidden"
+          }`}
           id="example-navbar-danger"
         >
           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">

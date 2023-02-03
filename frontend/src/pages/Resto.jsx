@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-/*import { useUserContext } from "../contexts/UserContext.jsx";*/
+/* import { useUserContext } from "../contexts/UserContext.jsx"; */
 import axios from "axios";
 import Restaurant from "@components/restaurant";
 

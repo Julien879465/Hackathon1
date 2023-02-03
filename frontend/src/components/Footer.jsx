@@ -26,7 +26,7 @@ export default function Footer() {
           <polygon
             className="text-gray-300 fill-current"
             points="2560 0 2560 100 0 100"
-          ></polygon>
+          />
         </svg>
       </div>
       <div className="container mx-auto px-4">
