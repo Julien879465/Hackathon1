@@ -16,19 +16,17 @@ function Restaurant({ selectedRestaurant }) {
   console.log(selectedRestaurant);
 
   return (
-    <div>
-      <ul>
-        {data
-          .filter((y) => y.restaurant_name === selectedRestaurant)
-          .map((menu) => (
-            <li key={menu.id}>
-              {menu.name_menu}
-              {menu.description_menu}
-              <img src={menu.image_url}></img>
-              {menu.price}
-            </li>
-          ))}
-      </ul>
+    <div className="flex flex-col ">
+      {data
+        .filter((y) => y.restaurant_name === selectedRestaurant)
+        .map((menu) => (
+          <div className="flex flex-row w-full flex-nowrap" key={menu.id}>
+            {menu.name_menu}
+            {menu.description_menu}
+            <img src={menu.image_url}></img>
+            {menu.price}
+          </div>
+        ))}
     </div>
   );
 }
