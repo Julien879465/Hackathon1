@@ -32,13 +32,13 @@ function MangerFeuille({ selectedRestaurant, setSelectedRestaurant }) {
         <div className="flex flex-row w-full justify-evenly items-center md:justify-start md:gap-4 ">
           <button
             type="button"
-            className="bg-white rounded-full h-[30px] w-[30px] flex items-center justify-center md:h-[50px] md:w-[50px]"
+            className="bg-white mt-6 rounded-full h-[30px] w-[30px] flex items-center justify-center md:h-[50px] md:w-[50px]"
             onClick={handleClick}
           >
             <img src={back} alt="go back" />
           </button>
 
-          <h1 className="py-5 font-sans font-semibold text-xl md:text-4xl">
+          <h1 className="py-5 mt-6 font-sans font-semibold text-xl md:text-4xl">
             MANGER ? Manger feuille ! 🌿
           </h1>
         </div>
