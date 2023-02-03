@@ -23,8 +23,6 @@ function Restaurant({ selectedRestaurant }) {
       .catch((err) => console.error(err));
   }, []);
 
-  console.log(selectedRestaurant);
-
   return (
     <div>
       {data
@@ -78,7 +76,7 @@ function Restaurant({ selectedRestaurant }) {
                   </div>
                   <div className="flex justify-center">
                     <p className="text-brown font-bold font-sans text-2xl">
-                      {card.price}
+                      {card.price.toFixed(0)}
                     </p>
                     <img
                       src={cailloux}

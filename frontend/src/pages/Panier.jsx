@@ -74,17 +74,16 @@ function Panier() {
                   </div>
                   <div className="flex flex-col text-brown font-semibold text-2xl items-start mx-4 my-3">
                     <p>{inCart.price.toFixed(0)}</p>
-                    <img src={cailloux} alt="monnaie caillou" className="" />
+                    <img src={cailloux} alt="monnaie caillou" />
                   </div>
                 </div>
               </div>
               <div className="flex flex-col items-center">
                 <h2 className=" font-cursive text-4xl text-black">
-                  {" "}
-                  Donner cailloux ?{" "}
+                  Donner cailloux ?
                 </h2>
                 <div className="flex items-center">
-                  <p>20</p>
+                  <p>{inCart.price.toFixed(0)}</p>
                   <img className="w-[31px] h-[33px]" src={cailloux} alt="" />
                 </div>
               </div>
