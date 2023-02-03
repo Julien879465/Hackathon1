@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import eucalLeft from "../assets/img/eucal-left.png";
 import eucalRight from "../assets/img/eucal-right.png";
 
-function MangerFeuille() {
+function MangerFeuille({ selectedRestaurant, setSelectedRestaurant }) {
   // faire le fetch ici en filtrant sur feu
   const [data, setData] = useState([]);
 
@@ -52,7 +52,12 @@ function MangerFeuille() {
                 feu.cuisine === "Bar à fruits"
             )
             .map((restaurant) => (
-              <div
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedRestaurant(restaurant.restaurant_name);
+                  navigate("/Resto");
+                }}
                 className="bg-white rounded-xl p-auto my-4 shadow-2xl drop-shadow-xl md:flex md:flex-col md:1/3 md:w-full"
                 key={restaurant.id}
               >
@@ -65,7 +70,7 @@ function MangerFeuille() {
                   <h2 className="text-base">{restaurant.restaurant_name}</h2>
                   <p className="text-xl">{restaurant.rating}/5</p>
                 </div>
-              </div>
+              </button>
             ))}
         </div>
       </div>
