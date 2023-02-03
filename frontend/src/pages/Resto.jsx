@@ -10,7 +10,7 @@ function Resto({ selectedRestaurant }) {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/mangerfeu");
+    navigate("/manger");
   };
   console.log(selectedRestaurant);
 
