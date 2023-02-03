@@ -53,7 +53,9 @@ function MangerFeuille() {
             )
             .map((restaurant) => (
               <div
-                className="bg-white rounded-xl p-auto my-4 md:flex md:flex-col md:1/3 md:w-full"
+
+                className="bg-white rounded-xl p-auto my-4 shadow-2xl drop-shadow-xl md:flex md:flex-col md:1/3 md:w-full"
+
                 key={restaurant.id}
               >
                 <img
@@ -62,6 +64,7 @@ function MangerFeuille() {
                   alt="Affiche restaurant"
                 />
                 <div className="flex justify-between font-sans font-semibold p-3 md:flex">
+
                   <h2 className="text-base">{restaurant.restaurant_name}</h2>
                   <p className="text-xl">{restaurant.rating}/5</p>
                 </div>
