@@ -4,7 +4,6 @@ import stone from "../assets/backgrounds/stone.png";
 import cailloux from "../assets/icons/cailloux.png";
 import Navbar from "../components/Navbar";
 import back from "../assets/icons/chevron-left.svg";
-import pizza from "../assets/img/margarita.jpeg";
 import caillouPrice from "../assets/img/caillouprice.png";
 
 function Panier() {
@@ -18,9 +17,9 @@ function Panier() {
     <div className="flex flex-col justify-between items-center h-full w-full">
       <Navbar />
 
-      {menus.map((poubelle) => (
+      {/* {menus.map((poubelle) => (
         <div>{poubelle.id}</div>
-      ))}
+      ))} */}
 
       <img
         src={stone}
@@ -41,16 +40,18 @@ function Panier() {
               Sac de manger
             </h1>
           </div>
+
+          {menus.map((inCart) =>
           <div className="flex flex-col justify-between h-full">
             <div className="bg-white font-sans rounded-xl">
               <div className="flex flex-row flex-nowrap justify-between">
                 <div className="flex font-semibold items-start">
                   <img
-                    src={pizza}
+                    src={inCart.image_url}
                     className="aspect-square max-w-[5rem] my-4 mx-4"
                   />
                   <div className="my-4 flex flex-col justify-between">
-                    <h3 className="text-sm ">Pizza Préhistorique</h3>
+                    <h3 className="text-sm ">{inCart.name_menu}</h3>
                     <div className="flex flex-row justify-start text-base my-4">
                       <div className="button bg-brown text-white rounded-3xl whitespace-nowrap px-3  py-1">
                         <button
@@ -73,7 +74,7 @@ function Panier() {
                   </div>
                 </div>
                 <div className="flex flex-col text-brown font-semibold text-2xl items-start mx-4 my-3">
-                  <p>10</p>
+                  <p>{inCart.price.toFixed(0)}</p>
                   <img src={caillouPrice} alt="monnaie caillou" className="" />
                 </div>
               </div>
@@ -102,7 +103,7 @@ function Panier() {
                 Donner
               </button>
             </div>
-          </div>
+          </div> )}
         </div>
       </div>
     </div>
