@@ -12,7 +12,6 @@ function Resto({ selectedRestaurant }) {
   const handleClick = () => {
     navigate("/manger");
   };
-  console.log(selectedRestaurant);
 
   useEffect(() => {
     axios
@@ -22,7 +21,6 @@ function Resto({ selectedRestaurant }) {
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(data);
 
   return (
     <>
@@ -39,7 +37,7 @@ function Resto({ selectedRestaurant }) {
         {data
           .filter((x) => x.restaurant_name === selectedRestaurant)
           .map((elem) => (
-            <>
+            <div>
               <li className="list-none" key={elem.id}>
                 <img
                   className="aspect-video w-full"
@@ -50,7 +48,7 @@ function Resto({ selectedRestaurant }) {
                   {elem.restaurant_name}
                 </h1>
               </li>
-            </>
+            </div>
           ))}
         <p className="m-2 mx-7 text-gray-700">
           Ici, manger chaud, manger bon, manger gras. Pizzas, pâtes, beaucoup
