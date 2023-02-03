@@ -16,15 +16,23 @@ function Restaurant({ selectedRestaurant }) {
   console.log(selectedRestaurant);
 
   return (
-    <div className="flex flex-col ">
+    <div>
       {data
         .filter((y) => y.restaurant_name === selectedRestaurant)
         .map((menu) => (
-          <div className="flex flex-row w-full flex-nowrap" key={menu.id}>
-            {menu.name_menu}
-            {menu.description_menu}
-            <img src={menu.image_url}></img>
-            {menu.price}
+          <div
+            className="w-full flex flex-row justify-between flex-nowrap my-4 rounded-lg bg-white"
+            key={menu.id}
+          >
+            <div className="flex flex-col justify-evenly items-start p-2 flex-nowrap">
+              <h1>{menu.name_menu} </h1>
+              <h2>{menu.description_menu}</h2>
+              <h3>{menu.price}</h3>
+            </div>
+            <img
+              className="aspect-square max-w-[40%] rounded-t-lg self-end"
+              src={menu.image_url}
+            ></img>
           </div>
         ))}
     </div>
