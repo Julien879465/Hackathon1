@@ -28,7 +28,7 @@ function MangerFeuille({ selectedRestaurant, setSelectedRestaurant }) {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-start justify-around w-full h-full p-auto px-7 bg-bg-sable ">
+      <div className="flex flex-col items-start justify-around w-full h-auto p-auto px-7 bg-bg-sable ">
         <div className="flex flex-row w-full justify-evenly items-center md:justify-start md:gap-4 ">
           <button
             type="button"
