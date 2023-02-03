@@ -29,7 +29,15 @@ export default function App() {
               />
             }
           />
-          <Route path="/mangerfeuille" element={<MangerFeuille />} />
+          <Route
+            path="/mangerfeuille"
+            element={
+              <MangerFeuille
+                selectedRestaurant={selectedRestaurant}
+                setSelectedRestaurant={setSelectedRestaurant}
+              />
+            }
+          />
           <Route
             path="/Resto"
             element={
