@@ -39,7 +39,9 @@ function Restaurant({ selectedRestaurant }) {
           >
             <div className="flex flex-col justify-evenly items-start p-2 flex-nowrap">
               <h1 className="font-bold">{menu.name_menu} </h1>
-              <h2 className="text-gray-400">{menu.description_menu}</h2>
+              <h2 className="text-gray-400 text-left">
+                {menu.description_menu}
+              </h2>
               <h3 className=" text-brown font-bold">
                 {menu.price.toFixed(0)}
                 <img

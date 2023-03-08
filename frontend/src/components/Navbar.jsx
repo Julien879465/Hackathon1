@@ -58,6 +58,14 @@ export default function Navbar() {
                 <span className="mt-10 md:mt-0">Sac de manger</span>
               </a>
             </li>
+            <li className="nav-item">
+              <a
+                className="text-brown px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug  md:text-white hover:animate-wiggle font-cursive"
+                href="/commentaires"
+              >
+                <span className="mt-10 md:mt-0">Bon ? Pas Bon ?</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

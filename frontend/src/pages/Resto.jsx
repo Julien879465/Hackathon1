@@ -28,7 +28,7 @@ function Resto({ selectedRestaurant }) {
       <div className="flex flex-col justify-between items-center w-screen h-auto  bg-bg-sable">
         <button
           type="button"
-          className="bg-white rounded-full h-[30px] w-[30px] top-10 left-5 fixed"
+          className="bg-white rounded-full h-[30px] w-[30px] top-20 left-5 fixed"
           onClick={handleClick}
         >
           <img src={back} alt="go back" />
