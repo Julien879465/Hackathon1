@@ -1,11 +1,22 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const UserContext = createContext();
 
 export const useUserContext = () => useContext(UserContext);
 
-export const UserContextProvider = ({ children }) => {
+export function UserContextProvider({ children }) {
   // mettre les states ici
-
-  return <UserContext.Provider value={{ /* passer les props ici*/}}> {children} </UserContext.Provider>;
-};
+  const [selectedRestaurant, setSelectedRestaurant] = useState(0);
+  return (
+    <UserContext.Provider
+      value={{
+        /* passer les props ici */
+        selectedRestaurant,
+        setSelectedRestaurant,
+      }}
+    >
+      {" "}
+      {children}{" "}
+    </UserContext.Provider>
+  );
+}

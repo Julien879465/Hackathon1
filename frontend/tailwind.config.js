@@ -42,6 +42,9 @@ module.exports = withMT({
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      "bg-sable": "#F1E4D1",
+      brown: "#9A7A49",
+      navbar: "#D8BC93",
     }),
     columns: {
       auto: "auto",
@@ -114,6 +117,7 @@ module.exports = withMT({
       ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
+      wiggle: "wiggle 1s ease-in-out infinite",
     },
     aria: {
       checked: 'checked="true"',
@@ -154,6 +158,13 @@ module.exports = withMT({
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl":
         "linear-gradient(to top left, var(--tw-gradient-stops))",
+      home: "url('./assets/img/eucal-1.png')",
+      stone: "url('./assets/img/stone-1.png')",
+      pokébowl: "url('./assets/img/pokébowl.jpg')",
+      sushi: "url('./assets/img/sushi.jpg')",
+      "bol-fruits": "url('./assets/img/bol-fruits.jpg')",
+      "pizzeria pates": "url('./assets/img/bol-fruits.jpg",
+      fastfood: "url('./assets/img/fastfood.jpg)",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {
@@ -367,22 +378,7 @@ module.exports = withMT({
       DEFAULT: "1",
     },
     fontFamily: {
-      sans: [
-        "ui-sans-serif",
-        "system-ui",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        '"Noto Sans"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
+      sans: ["Raleway"],
       serif: [
         "ui-serif",
         "Georgia",
@@ -401,6 +397,7 @@ module.exports = withMT({
         '"Courier New"',
         "monospace",
       ],
+      cursive: ["Londrina Solid"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
@@ -605,6 +602,10 @@ module.exports = withMT({
           transform: "none",
           animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
         },
+      },
+      wiggle: {
+        "0%, 100%": { transform: "rotate(-3deg)" },
+        "50%": { transform: "rotate(3deg)" },
       },
     },
     letterSpacing: {
