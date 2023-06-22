@@ -8,7 +8,7 @@ import ChangerToi from "./pages/ChangerToi";
 import Resto from "./pages/Resto";
 import Home from "./pages/Home";
 import Panier from "./pages/Panier";
-import Commentaires from "./pages/commentaires";
+import Commentaires from "./pages/Commentaires";
 
 export default function App() {
   const [selectedRestaurant, setSelectedRestaurant] = useState("");
