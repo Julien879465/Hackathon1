@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 /*import { useUserContext } from "../contexts/UserContext.jsx";*/
 import axios from "axios";
 import back from "../assets/icons/chevron-left.svg";
-import Restaurant from "@components/restaurant";
+import Restaurant from "@components/Restaurant";
 import Navbar from "@components/Navbar";
 
 function Resto({ selectedRestaurant }) {
